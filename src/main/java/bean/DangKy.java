@@ -50,5 +50,9 @@ public class DangKy {
 	public void setBuoiDangKy(int buoiDangKy) {
 		this.buoiDangKy = buoiDangKy;
 	}
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getMaDangKy() + "\t" + getMaPhong() + "\t" + getMaLop() + "\t" + getNgayDangKy() + "\t" + getBuoiDangKy();
+	}
 }
