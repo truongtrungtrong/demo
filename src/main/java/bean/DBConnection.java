@@ -3,7 +3,11 @@ package bean;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+/**
+ * Lớp dùng để kết nối tới CSDL
+ * @author Giáo trình slide 27
+ *
+ */
 public class DBConnection {
 	private Connection conn;
 	static final String PASSWORD = "tn208";
@@ -12,6 +16,7 @@ public class DBConnection {
 
 	/**
 	 * Hàm khởi tạo lớp kết nối CSDL
+	 * @author Giáo trình slide 27
 	 */
 	public DBConnection() {
 		try {
@@ -22,9 +27,10 @@ public class DBConnection {
 	}
 
 	/**
-	 * Hàm dùng để lấy kết nối để kết nối đến MySQL
+	 * Hàm dùng để lấy kết nối để tạo kết nối đến CSDL
 	 * 
 	 * @return conn - Một kết nối
+	 * @author Giáo trình slide 27
 	 */
 	public Connection getConnection() {
 		try {
@@ -37,6 +43,7 @@ public class DBConnection {
 
 	/**
 	 * Đóng một kết nối
+	 * @author Giáo trình slide 27
 	 */
 	public void closeConnection() {
 		if (conn == null) {
