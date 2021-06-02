@@ -3,12 +3,14 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.sql.Date;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
+import com.mindfusion.common.DateTime;
 import com.mindfusion.scheduling.Calendar;
+import com.mindfusion.scheduling.model.Appointment;
 
 @SuppressWarnings("serial")
 public class XemLichGUI extends JFrame {
@@ -18,6 +20,12 @@ public class XemLichGUI extends JFrame {
 		khoiTaoFrame();
 	}
 	private void khoiTaoFrame() {
+		DateTime d = new DateTime(2021, 6, 1);
+		Appointment app = new Appointment();
+		app.setStartTime(d);
+		app.setEndTime(d);
+		app.setHeaderText("Lớp 12345\tGV 12345 Buoi sang");
+		calendar.getSchedule().getItems().add(app);
 		setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.fill = GridBagConstraints.BOTH;
