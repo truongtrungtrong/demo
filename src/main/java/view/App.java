@@ -2,6 +2,8 @@ package view;
 
 import java.awt.EventQueue;
 
+import DAO.DangKyDAOImpl;
+
 /**
  * Class chính cho chương trình
  * @author Trần Văn Hòa
